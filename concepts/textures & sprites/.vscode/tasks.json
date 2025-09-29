@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build SFML App (ucrt64)",
+            "type": "shell",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}/main.cpp",
+                "-IC:/msys64/ucrt64/include",
+                "-LC:/msys64/ucrt64/lib",
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system",
+                "-o",
+                "${workspaceFolder}/game.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+              "kind":"build",
+              "isDefault": true
+            },
+            "detail": "SFML build using MSYS2 ucrt64 toolchain"
+        }
+    ]
+}
